@@ -1,0 +1,17 @@
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+body {
+    background-image: url("/img/currency-background.jpg");
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+}
