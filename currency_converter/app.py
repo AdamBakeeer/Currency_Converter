@@ -31,6 +31,7 @@ def index():
 
     result = None
     error_message = None
+    rate = None
 
     if request.method == 'POST':
         base_currency = request.form.get('base_currency')
@@ -55,10 +56,11 @@ def index():
                 conversion_rates = data.get('conversion_rates', {})
                 rate = conversion_rates.get(target_currency)
                 print(rate)
-                result = float(amount) * rate            
+                result = round((float(amount) * rate), 2)
+                           
 
 
-    return render_template('index.html', currencies=currencies, result=result, error_message=error_message)
+    return render_template('index.html', currencies=currencies, result=result, error_message=error_message, rate=rate)
 
     
 
